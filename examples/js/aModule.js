@@ -1,4 +1,4 @@
-var myPrj = new deFineNs();
+var myPrj = new defineNs();
 
 myPrj.define('aModule', [], function () {
     'use strict';

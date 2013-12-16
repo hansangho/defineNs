@@ -34,23 +34,9 @@ module.exports = function(grunt) {
                     'examples/js/<%= pkg.name %>.min.js': 'build/<%= pkg.name %>.js'
                 }
             }
-        },
-
-        jshint: {
-            files: ['Gruntfile.js', 'src/**/*.js'],
-            options: {
-                smarttabs: true,
-                unused: false,
-                multistr: true,
-                "-W041": false,
-                "-W040": false,
-                globals: {
-                    jQuery: true
-                }
-            }
-        },
+        }
 
     });
 
-    grunt.registerTask('default', ['jshint', 'requirejs', 'copy', 'uglify']);
+    grunt.registerTask('default', ['concat', 'uglify']);
 };

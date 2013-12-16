@@ -1,8 +1,9 @@
+/* update: 2013-12-16 12:46:23 PM */
 (function() {
     'use strict';
 
     var global = (function(){ return this || (0,eval)('this'); }());
-        global.defineNs = global.defineNs || defineNamespace;
+        global.defineNs = defineNamespace;
 
     function defineNamespace() {
         var names = [], depens = [], modules = [];
@@ -18,7 +19,7 @@
                     module = global.jQuery;
                 }
                 if(!module) {
-                    throw new Error(depenName + ' is not defined!');
+                    throw new Error(depenName + ' is not define!');
                 }
                 args.push(module);
             }
